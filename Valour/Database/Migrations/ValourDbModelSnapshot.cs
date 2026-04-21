@@ -4162,6 +4162,10 @@ namespace Valour.Database.Migrations
                         .HasColumnType("boolean")
                         .HasColumnName("force_gpu_acceleration");
 
+                    b.Property<string>("Language")
+                        .HasColumnType("text")
+                        .HasColumnName("language");
+
                     b.Property<bool>("MarketingEmailOptOut")
                         .HasColumnType("boolean")
                         .HasColumnName("marketing_email_opt_out");
@@ -4169,6 +4173,14 @@ namespace Valour.Database.Migrations
                     b.Property<int>("NotificationVolume")
                         .HasColumnType("integer")
                         .HasColumnName("notification_volume");
+
+                    b.Property<bool>("SyncLanguageBetweenDevices")
+                        .HasColumnType("boolean")
+                        .HasColumnName("sync_language_between_devices");
+
+                    b.Property<int>("TimeFormat")
+                        .HasColumnType("integer")
+                        .HasColumnName("time_format");
 
                     b.HasKey("Id");
 
